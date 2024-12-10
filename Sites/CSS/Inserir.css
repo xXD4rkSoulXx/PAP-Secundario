@@ -1,0 +1,263 @@
+body
+{
+	font-family: Josefin Sans; /* Mete o tipo de letra a Josefin Sans */
+}
+
+.imagem
+{
+	position: Absolute; /* Faz a imagem ficar na esquerda */
+	margin-left: 5%; /* A imagem afasta-se da esquerda 5% do comprimento do ecrã */
+	margin-top: 120px; /* A imagem afasta-se do topo do ecrã 120px */
+}
+
+.zonaequipamento
+{
+	margin-left: 55%; /* Faz a caixa de seleção dos equipamentos afastar-se da esquerda 55% do comprimento do ecrã */
+	font-family: Josefin Sans; /* Faz a caixa de seleção dos equipamentos ter o tipo de letra Josefin Sans */
+	position: Absolute; /* Faz a caixa de seleção dos equipamentos ficar mais junto ao formulário */
+	margin-top: 20px; /* A caixa de seleção dos equipamentos afasta-se 20px do topo */
+}
+
+.zonainserir
+{
+	margin-left: 55%; /* Faz o formulário afastar-se da esquerda 55% do comprimento do ecrã */
+	font-family: Josefin Sans; /* Faz o formulário ter o tipo de letra Josefin Sans */
+}
+
+h1
+{
+	margin-left: 55%; /* Faz todos os títulos afastar-se da esquerda 55% do comprimento do ecrã */
+	margin-top: 100px; /* Os títulos afasta-se do topo do ecrã 100px */
+	font-family: Josefin Sans; /* Faz todos os títulos ter o tipo de letra Josefin Sans */
+}
+
+input[type=text], input[type=password], select, textarea
+{
+    width: 500px; /* Mete as caixas de texto e a caixa de seleção com o comprimento de 500px */
+	height: 35px; /* Mete as caixas de texto e a caixa de seleção com a altura de 35px */
+	border-radius: 5px; /* Mete as caixas de texto e a caixa de seleção com as bordas com um raio de 5px */
+	border-width: 1px; /* Mete as caixas de texto e a caixa de seleção com as bordas com de 1px de espessura */
+	border-color: #A3A9A6; /* Mete as caixas de texto e a caixa de seleção com as bordas a uma tonalidade de cizento */
+	border-style: Solid; /* Mete as caixas de texto e a caixa de seleção com as bordas mais destacáveis */
+	font-family: Josefin Sans; /* Mete as caixas de texto e a caixa de seleção com o tipo de letra Josefin Sans */
+	font-size: 14px; /* Mete as caixas de texto e a caixa de seleção com a letra com 14px de tamanho */
+	padding-left: 5px; /* Afasta da esquerda as caixas de texto e a caixa de seleção 5px */
+	resize: none; /* Remove a possibilidade do utilizador poder mover a caixa de texto como alterar o comprimento e a altura pré definida evitando assim que o site fique desconfigurado  */
+}
+
+textarea
+{
+	height: 200px; /* A caixa e texto grande fica com 200px de altura */
+}
+
+input[type=text]:hover, input[type=password]:hover, .btninserir:hover, select:hover, textarea:hover /* Quando passar com o rato por cima de alguma caixa de texto ou alguma caixa de seleção: */
+{
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1), 0px 6px 20px 0px rgba(0, 0, 0, 0.1); /* A caixa de texto ou a caixa de seleção que meti o rato por cima fica com o fundo sombreado */
+}
+
+label
+{
+	font-size: 14px; /* Mete as mensagens de erro com tamanho de 14px */
+	font-family: Josefin Sans; /* Mete as mensagens de erro com o tipo de letra Josefin Sans */
+	color: Red; /* Mete as mensagens de erro com cor vermelha */
+}
+
+.zonafoto
+{
+	width: 500px; /* O comprimento da fotografia fica a 500px */
+	height: 350px; /* A Altura da fotografia fica a 350px */
+}
+
+.tagimg
+{
+	transition: 0.3s; /* Se houver alguma animação com a fotografia ela demora 0,3 segundos a ser executada */
+}
+
+.zonafoto .foto
+{
+	position: Relative; /* Faz a fotografia ficar por cima de todos */
+	width: 100%; /* A fotografia de comprimento vai ocupar a zona toda */
+	height: 300px; /* A fotografia fica com altura de 300px */
+	border-radius: 10px; /* A fotografia fica com as bordas com 10px de raio */
+	border: 2px dashed #C2CDDA; /* As bordas da fotografia ficam com 2px de expessura, picotados com cor de uma tonalidade de cizento */
+	display: Flex; /* Obrigatório se quero usas o align-items e o justify-content */
+	justify-content: Center; /* Faz com que a fotografia e os ícones fique centrado na horizontal */
+	align-items: Center; /* Faz com que a fotografia e os ícones fique centrado na vertical */
+	overflow: Hidden; /* Faz desaparecer as barras de rolagem */
+}
+
+.foto .bordasfoto
+{
+	position: Absolute; /* Faz as bordas da fotografia ficar mesmo colado à fotografia */
+	width: 100%; /* As bordas da fotografia de comprimento vai ocupar a zona toda */
+	height: 100%; /* As bordas da fotografia de altura vai ocupar a zona toda */
+	display: Flex; /* Obrigatório se quero usas o align-items e o justify-content */
+	justify-content: Center; /* Faz com que as bordas da fotografia fique centrado na horizontal */
+	align-items: Center; /* Faz com que as bordas da fotografia fique centrado na vertical */
+}
+
+.foto .bordasfoto .tagimg
+{
+	width: 100%; /* A fotografia de comprimento vai ocupar a zona toda */
+	height: 100%; /* A fotografia de altura vai ocupar a zona toda */
+	object-fit: Cover; /* A fotografia deixa de estar desfocada */
+}
+
+.foto .iconenuvem
+{
+	font-size: 100px; /* O ícone da nuvem fica com 100px de tamanho */
+	color: #E63946; /* O ícone da nuvem fica com uma tonalidade de vermelho */
+	text-align: Center; /* O ícone da fotografia fica centrado */
+}
+
+.foto .texto
+{
+	font-size: 20px; /* O texto fica com 20px de tamanho */
+	font-weight: 500; /* Faz com que a cor fique um pouco mais pesada do que já é */
+	color: #5B5B7B; /* A cor do texto fica com a cor a uma tonalidade de cizento */
+}
+
+.foto.escolhida
+{
+	border: None; /* Retira as bordas da fotografia quando já está selecionada */
+}
+
+.foto .nomeficheiro
+{
+	position: Absolute; /* Faz o nome da fotografia ficar em cima da zona vermelha para ficar visível */
+	bottom: 0px; /* O nome da fotografia fica quase colado em baixo */
+	text-align: Center; /* O nome da fotografia fica centrado */
+	width: 100%; /* A fotografia fica com o comprimento de 100% */
+	color: #FFFFFF; /* A cor do nome da fotografia fica a branco */
+	padding: 8px 0px; /* O nome da fotografia afasta-se 8px da esquerda e da direita */
+	font-size: 18px; /* O nome da fotografia fica com 18px de tamanho */
+	display: None; /* O nome da fotografia fica invisível por defeito e só vai aparecer quando uma fotografia for selecionada */
+	background-color: #E63946; /* O nome da fotografia fica com o fundo com uma tonalidade de vermelho */
+}
+
+.foto .btnretirarfoto
+{
+	position: Absolute; /* Faz botão de retirar a fotografia ficar no mesmo sítio lá em cima no canto direito */
+	right: 15px; /* O botão de retirar a fotografia afasta-se 15px da direita */
+	top: 15px; /* O botão de retirar a fotografia afasta-se 15px do topo */
+	font-size: 20px; /* O botão de retirar a fotografia fica com 18px de tamanho */
+	cursor: Pointer; /* Quando meto o rato em cima do botão de retirar a fotografia ele muda o ponteiro para que fique o indicador */
+	display: None; /* O botão de retirar a fotografia fica invisível por defeito e só vai aparecer quando uma fotografia for selecionada */
+	color: #E63946; /* O botão de retirar a fotografia fica a vermelho */
+}
+
+.foto .btnretirarfoto:hover /* Quando meto o rato por cima do botão de retirar a fotografia: */
+{
+	color: #DD3C48; /* O botão de retirar a fotografia fica com uma cor de uma tonalidade de vermelho mais escuro */
+}
+
+.foto.escolhida:hover .btnretirarfoto /* Quando meto o rato por cima da fotografia: */
+{
+	display: Block; /* O botão de retirar a fotografia fica visível */
+}
+
+.foto.escolhida:hover .nomeficheiro /* Quando meto o rato por cima da fotografia: */
+{
+	display: Block; /* O nome do ficheiro fica visível */
+}
+
+.btnfotoescondido
+{
+	z-index: -1; /* O botão de selecionar a fotografia fica por deibaixo de tudo para não ficar visível */
+	position: Absolute; /* O botão de selecionar a fotografia fica sempre no mesmo sítio escondido */
+	margin-top: 25px; /* O botão de selecionar a fotografia afasta-se 25px do topo */
+}
+
+.btninserir
+{
+    width: 500px; /* Mete o botão com comprimento de 500px */
+	background-color: #E63946; /* Mete a cor de fundo do botão a uma tonalidade de vermelho */
+	color: White; /* Mete a cor da letra do botão a branco */
+	padding: 10px; /* Mete a letra do botão afastada 10px de cima, de baixo, da esquerda e da direita */
+	margin: 8px 0px; /* Afasta o botão 8px de cima e de baixo */
+	border: None; /* Retira o destaque das bordas do botão */
+	border-radius: 8px; /* Mete as bordas do botão com 8px de raio */
+	cursor: Pointer; /* Mete o ponteiro do rato com o indicador quando meto o caro por cima do botão */
+	font-size: 20px; /* Mete a letra do botão com tamanho de 20px */
+}
+
+.btninserir:hover /* Quando passar com o rato por cima do botão faz o seguinte: */
+{
+	background-color: #DD3C48; /* Mete a cor de fundo do botão a uma tonalidade de vermelho mais escuro que o que estava */
+}
+
+@media screen and (max-width: 1650px) /* Quando o comprimento do ecrã for 1650px ou menor vai acontecer o seguinte: */
+{
+    .imagem
+	{
+	    position: Static; /* A imagem retorna por defeito aonde estava originalmente */
+		width: 500px; /* Mete o comprimento da imagem a 500px */
+		margin-left: 30%; /* Afasta da esquerda a imagem 30% do comprimento do ecrã do centro do ecrã */
+	}
+	
+	.zonaequipamento
+	{
+		margin: Auto; /* Centra a caixa de seleção do equipamento */
+		width: 50%; /* A caixa de seleção do equipamento fica com o comprimento a 50% do comprimento do ecrã */
+		position: Static; /* A caixa de seleção do equipamento volta ao sítio original */
+		margin-left: 25%; /* Afasta da esquerda a caixa de seleção do equipamento 25% do comprimento do ecrã do centro do ecrã */
+		border-left: 100px solid transparent; /* Mete para a borda esquerda da caixa de seleção do equipamento ficar com uma grossura de 100px mas tranparente para dar espaço sem ver-se */
+	}
+	
+	.zonainserir
+	{
+		margin: Auto; /* Centra o título o formulário */
+		width: 50%; /* Mete para o formulário ficar com o comprimento de 50% do comprimento do ecrã do computador */
+		margin-left: 25%; /* Afasta da esquerda o formulário 25% do comprimento do ecrã do centro do ecrã */
+		border-left: 100px solid transparent; /* Mete para a borda esquerda do formulário ficar com uma grossura de 100px mas tranparente para dar espaço sem ver-se */
+	}
+	
+	h1
+	{
+		margin: Auto; /* Centra o título do formulário */
+		width: 50%; /* Mete para o título do formulário ficar com o comprimento de 50% do comprimento do ecrã do computador */
+		margin-left: 25%; /* Afasta o título do formulário 25% do comprimento do ecrã do centro do ecrã */
+		border-left: 100px solid transparent; /* Mete para a borda esquerda do título do formulário ficar com uma grossura de 100px mas tranparente para dar espaço sem ver-se */
+	}
+}
+
+@media screen and (max-width: 1100px) /* Quando o comprimento do ecrã for 1100px ou menor vai acontecer o seguinte: */
+{
+	.zonaequipamento
+	{
+		border-left: None; /* Retira a borda esquerda da zona do equipamento */
+	}
+	
+	.zonainserir
+	{
+		border-left: None; /* Retira a borda esquerda do formulário */
+	}
+	
+	h1
+	{
+		border-left: None; /* Retira a borda esquerda do título do formulário */
+	}
+}
+
+@media screen and (max-width: 800px) /* Quando o comprimento do ecrã for 800px ou menor vai acontecer o seguinte: */
+{
+	.imagem
+	{
+		width: 300px; /* A imagem fica com 300px de comprimento */
+	}
+	
+	input[type=text], input[type=password], select, textarea
+	{
+		width: 350px; /* Mete as caixas de texto e a caixa de seleção ficam com 350px de comprimento */
+	}
+	
+	.zonafoto
+	{
+		width: 350px; /* A zona da fotografia fica com 350px de comprimento */
+	}
+	
+	.btninserir
+	{
+		width: 350px; /* O botão fica com 350px de comprimento */
+	}
+}

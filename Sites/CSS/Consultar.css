@@ -1,0 +1,407 @@
+.zonaconsultar
+{
+	margin-left: 100px; /* A zona de consultar afasta-se 100px da esquerda */
+}
+
+.pesquisar
+{
+	width: 300px; /* O comprimento da caixa de texto fica a 300px */
+	height: 40px; /* A altura da caixa de texto fica a 40px */
+	border-radius: 5px; /* As bordas da caixa de texto ficam a 5px de raio */
+	border-left-width: 4px; /* O comprimento da borda esquerda da caixa de texto fica a 4px */
+	border-right-width: 40px; /* O comprimento da borda direita da caixa de texto fica a 40px */
+	border-top-width: 4px; /* O comprimento da borda do topo da caixa de texto fica a 4px */
+	border-bottom-width: 4px; /* O comprimento da borda de baixo da caixa de texto fica a 4px */
+	border-color: #457B9D; /* A cor da borda fica a uma tonalidade de azul escuro */
+	border-style: Solid; /* A borda fica com um estilo mais sólido */
+	font-family: Josefin Sans; /* O tipo de letra da caixa de texto fica a Josefin Sans */
+	font-size: 14px; /* O tamanho da letra da caixa de texto fica a 14px */
+	padding-left: 5px; /* A letra da caixa de texto afasta-se da esquerda 5px */
+	position: Absolute; /* A caixa de texto fica por cima de tudo */
+	margin-left: 200px; /* A caixa de texto afasta-se 200px da esquerda */
+}
+
+.btnpesquisar
+{
+	height: 25px; /* O botão de pesquisar fica com 25px de altura */
+	font-size: 14px; /* A letra do botão de pesquisar fica com 14px de tamanho */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo do botão ocupa a zona toda que é-lhe dada */
+	background-color: Transparent; /* O botão de pesquisar fica com uma cor de fundo transparente */
+	border: 0px; /* Retira as bordas do botão de pesquisar */
+	width: 25px; /* O botão de pesquisar fica com 25px de comprimento */
+	position: Absolute; /* O botão de pesquisar fica por cima de tudo */
+	margin-left: 468px; /* O botão de pesquisar afasta-se 468px da esquerda */
+	margin-top: 8px; /* O botão de pesquisar afasta-se 8px do topo*/
+	z-index: 1; /* O botão de pesquisar fica por cima de tudo até da caixa de texto que é algo que também estava por cima de tudo mas fica por cima da caixa de texto */
+	cursor: Pointer; /* Quando meto o rato por cima do botão de pesquisar ele fica com o ponteiro com um indicador */
+}
+
+.selectpesquisar, .selectordenar
+{
+    width: 200px; /* As caixas de seleções ficam com 200px de comprimento */
+	height: 40px; /* As caixas de seleções ficam com 40px de altura */
+	border-radius: 5px; /* As bordas das caixas de seleções ficam com 5px de raio*/
+	border-left-width: 4px; /* O comprimento da borda esquerda das caixas de seleção fica a 4px */
+	border-right-width: 4px; /* O comprimento da borda direita das caixas de seleção fica a 40px */
+	border-top-width: 4px; /* O comprimento da borda do topo das caixas de seleção fica a 4px */
+	border-bottom-width: 4px; /* O comprimento da borda de baixo das caixas de seleção fica a 4px */
+	border-color: #457B9D; /* A cor da borda fica a uma tonalidade de azul escuro */
+	border-style: Solid; /* A borda fica com um estilo mais sólido */
+	font-family: Josefin Sans; /* O tipo de letra das caixas de seleção ficam a Josefin Sans */
+	font-size: 14px; /* O tamanho da letra das caixas de seleção ficam a 14px */
+	padding-left: 5px; /* As letras das caixas de seleção afastam-se da esquerda 5px */
+	margin-left: 525px; /* As caixas de seleção afastam-se 525px da esquerda */
+}
+
+.textoordenar
+{
+	font-size: 15px; /* O texto fica com tamanho de 15px */
+	margin-left: 200px; /* O texto afasta-se 200px da esquerda */
+}
+
+.selectordenar
+{
+	margin-left: 200px; /* A caixa de seleção afasta-se 200px da esquerda */
+}
+
+.zonatabela
+{
+	margin-left: 200px; /* A tabela afasta-se 200px da esquerda */
+	overflow: Auto; /* A tabela quando não couber na tela vai aparecer umas barras de rolagem */
+}
+
+table, th, td 
+{
+	word-break: Break-all; /* O texto que não couber na coluna é mandado para baixo para evitar que a tabela seja desconfigurada */ 
+	border-collapse: Collapse; /* Cria as bordas da tabela */
+}
+
+.tabela
+{
+	/* Na página normal lá é que define-se o comprimento tabela porque muda consoante a quantidade de campos */
+	border-collapse: Collapse; /* Cria as bordas da tabela */
+	margin: 25px 0px; /* A tabela afasta-se 25px de cima e de baixo da zona da tabela e fica colado na direita e na esquerda */
+	font-size: 90%; /* O tamanho da letra da tabela fica a 90% do seu tamanho original */
+	font-family: Josefin Sans; /* O tipo de letra da tabela fica a Josefin Sans */
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); /* A tabela fica com um efeito de sombras */
+	border-spacing: 0px; /* Mete colado às bordas o texto da coluna */
+}
+
+.tabela thead tr
+{
+	background-color: #457B9D; /* A cor de fundo do cabeçalho da tabela fica com uma tonalidade de azul escuro */
+	color: #FFFFFF; /* A cor da letra dos títulos da tabela ficam a branco */
+	text-align: Left; /* Os títulos ficam alinhados à esquerda */
+}
+
+.tabela th, .tabela td 
+{
+	height: 55px; /* As letras da tabela ficam com altura de 55px */
+	padding-left: 15px; /* As letras da tabela afastam-se 15px da esquerda */
+}
+
+.tabela tbody tr
+{
+	border-bottom: 1px solid #DDDDDD; /* As bordas de baixo de cada linha da tabela fica com 1px de expessura, sólidos e com for de fundo a uma tonalidade de cizento */
+}
+
+.tabela tbody tr:nth-of-type(even) /* De 2 em 2 pelos números pares sem contar com o cabeçalho da tabela */
+{
+	background-color: #F0E4E4; /* A cor de fundo da linha da tabela fica com uma tonalidade de vermelho */
+}
+
+.tabela tbody tr:last-of-type /* No último */
+{
+	border-bottom: 2px solid #E63946; /* As bordas de baixo da última linha fica com 2px de expessura, sólidos e com uma cor com uma tonalidade de vermelho */
+}
+
+thead tr, tbody
+{
+	display: Block; /* Mete visível a tabela */
+}
+
+th.tabela
+{
+	background-color: #457B9D; /* A cor de fundo dos títulos da tabela ficam com uma tonalidade de azul escuro */
+	color: White; /* A cor da letra dos títulos ficam a branco */
+}
+
+tbody
+{
+	max-height: 500px; /* A altura máxima que a tabela pode ter são 500px */
+	overflow-x: Hidden; /* A barra de rolagem horizontal fica escondida */
+	overflow-y: Scroll; /* A barra de rolagem vertical aparece */
+}
+
+tbody td
+{
+	/* Na página normal lá é que define-se o comprimento normal porque muda consoante os campos */
+	box-sizing: Border-box; /* Faz com que o padding seja contado como o width para ajudar melhor na responsividade */
+}
+
+.campotabela
+{
+	/* Na página normal lá é que define-se o comprimento normal porque muda consoante os campos */
+	box-sizing: Border-box; /* Faz com que o padding seja contado como o width para ajudar melhor na responsividade */
+}
+
+.campoultimo /* Diferente do de cima, este é destinado para que a tabela fique alinhado com a barra de rolagem */
+{
+	/* Na página normal lá é que define-se o (comprimento normal + 16) porque muda consoante os campos */
+	box-sizing: Border-box; /* Faz com que o padding seja contado como o width para ajudar melhor na responsividade */
+}
+
+.dadotabela
+{
+	height: 30px; /* A altura da caixa de texto para editar fica a 30px */
+	border-radius: 5px; /* As bordas da caixa de texto para editar ficam com 5px de raio */
+	border-left-width: 2px; /* O comprimento da borda esquerda da caixa de texto para editar fica a 2px */
+	border-right-width: 2px; /* O comprimento da borda direita da caixa de texto para editar fica a 2px */
+	border-top-width: 2px; /* O comprimento da borda do topo da caixa de texto para editar fica a 2px */
+	border-bottom-width: 2px; /* O comprimento da borda de baixo da caixa de texto para editar fica a 2px */
+	border-color: #457B9D; /* A cor da borda fica a uma tonalidade de azul escuro */
+	border-style: Solid; /* A borda fica com um estilo mais sólido */
+	font-family: Josefin Sans; /* O tipo de letra da caixa de texto para editar fica a Josefin Sans */
+	font-size: 14px; /* O tamanho da letra da caixa de texto para editar fica a 14px */
+	padding-left: 5px; /* A letra da caixa de texto para editar afasta-se da esquerda 5px */
+}
+
+.btntabela
+{
+	background-color: #E63946; /* A cor de fundo do botão fica com uma tonalidade de vermelho */
+	color: White; /* A cor da letra do botão fica a branco */
+	padding: 2px 10px; /* O botão afasta-se 2px de cima e de baixo e 10px da esquerda e da direita */
+	border: None; /* Retira as bordas do botão */
+	border-radius: 8px; /* As botdas do botão ficam com 8px de raio */
+	cursor: Pointer; /* Quando meto o rato em cima do botão o ponteiro fica com o indicador */
+	font-size: 15px; /* A letra do botão fica com 15px de tamanho */
+	font-family: Josefin Sans; /* O tipo de letra do botão fica a Josefin Sans */
+	line-height: 30px; /* A altura da linha fica a 30px */
+	box-shadow: 7px 8px 20px 5px rgba(0, 0, 0, 0.0); /* Cria umas sombras no botão mas elas ainda não apareceram */
+	transition-property: Box-shadow; /* Vai fazer animação com sombras */
+	transition-duration: 0.3s; /* A animação vai durar 0,3 segundos */
+}
+
+.btntabela:hover /* Quando meter o rato por cima do botão: */
+{
+	box-shadow: 7px 8px 20px 5px rgba(0, 0, 0, 0.2); /* O botão fica com sombras por baixo e por causa do trasition faz com que fique uma animação de 0,3 segundos */
+}
+
+label
+{
+	font-family: Josefin Sans; /* O texto normal fica com o tipo de letra a Josefin Sans */
+}
+
+a
+{
+	text-decoration: None; /* Remove o sublinhado do link */
+	color: White; /* O link fica com cor branca */
+	font-family: Josefin Sans; /* O link fica com o tipo de letra a Josefin Sans */
+}
+
+.link
+{
+	text-decoration: None; /* Remove o sublinhado do link */
+	color: #E63946; /* O link fica com uma cor com uma tonalidade de vermelho */
+	font-family: Josefin Sans; /* O link fica com o tipo de letra a Josefin Sans */
+	cursor: Pointer; /* Quando meto o rato por cima do link ele muda o ponteiro para um indicador */
+}
+
+.zonafoto
+{
+	width: 500px; /* O comprimento da fotografia fica a 500px */
+	height: 350px; /* A Altura da fotografia fica a 350px */
+}
+
+.tagimg
+{
+	transition: 0.3s; /* Se houver alguma animação com a fotografia ela demora 0,3 segundos a ser executada */
+}
+
+.zonafoto .foto
+{
+	position: Relative; /* Faz a fotografia ficar por cima de todos */
+	width: 100%; /* A fotografia de comprimento vai ocupar a zona toda */
+	height: 300px; /* A fotografia fica com altura de 300px */
+	border-radius: 10px; /* A fotografia fica com as bordas com 10px de raio */
+	border: 2px dashed #C2CDDA; /* As bordas da fotografia ficam com 2px de expessura, picotados com cor de uma tonalidade de cizento */
+	display: Flex; /* Obrigatório se quero usas o align-items e o justify-content */
+	justify-content: Center; /* Faz com que a fotografia e os ícones fique centrado na horizontal */
+	align-items: Center; /* Faz com que a fotografia e os ícones fique centrado na vertical */
+	overflow: Hidden; /* Faz desaparecer as barras de rolagem */
+}
+
+.foto .bordasfoto
+{
+	position: Absolute; /* Faz as bordas da fotografia ficar mesmo colado à fotografia */
+	width: 100%; /* As bordas da fotografia de comprimento vai ocupar a zona toda */
+	height: 100%; /* As bordas da fotografia de altura vai ocupar a zona toda */
+	display: Flex; /* Obrigatório se quero usas o align-items e o justify-content */
+	justify-content: Center; /* Faz com que as bordas da fotografia fique centrado na horizontal */
+	align-items: Center; /* Faz com que as bordas da fotografia fique centrado na vertical */
+}
+
+.foto .bordasfoto .tagimg
+{
+	width: 100%; /* A fotografia de comprimento vai ocupar a zona toda */
+	height: 100%; /* A fotografia de altura vai ocupar a zona toda */
+	object-fit: Cover; /* A fotografia deixa de estar desfocada */
+}
+
+.foto .iconenuvem
+{
+	font-size: 100px; /* O ícone da nuvem fica com 100px de tamanho */
+	color: #E63946; /* O ícone da nuvem fica com uma tonalidade de vermelho */
+	text-align: Center; /* O ícone da fotografia fica centrado */
+}
+
+.foto .texto
+{
+	font-size: 20px; /* O texto fica com 20px de tamanho */
+	font-weight: 500; /* Faz com que a cor fique um pouco mais pesada do que já é */
+	color: #5B5B7B; /* A cor do texto fica com a cor a uma tonalidade de cizento */
+}
+
+.foto.escolhida
+{
+	border: None; /* Retira as bordas da fotografia quando já está selecionada */
+}
+
+.foto .nomeficheiro
+{
+	position: Absolute; /* Faz o nome da fotografia ficar em cima da zona vermelha para ficar visível */
+	bottom: 0px; /* O nome da fotografia fica quase colado em baixo */
+	text-align: Center; /* O nome da fotografia fica centrado */
+	width: 100%; /* A fotografia fica com o comprimento de 100% */
+	color: #FFFFFF; /* A cor do nome da fotografia fica a branco */
+	padding: 8px 0px; /* O nome da fotografia afasta-se 8px da esquerda e da direita */
+	font-size: 18px; /* O nome da fotografia fica com 18px de tamanho */
+	display: None; /* O nome da fotografia fica invisível por defeito e só vai aparecer quando uma fotografia for selecionada */
+	background-color: #E63946; /* O nome da fotografia fica com o fundo com uma tonalidade de vermelho */
+}
+
+.foto .btnretirarfoto
+{
+	position: Absolute; /* Faz botão de retirar a fotografia ficar no mesmo sítio lá em cima no canto direito */
+	right: 15px; /* O botão de retirar a fotografia afasta-se 15px da direita */
+	top: 15px; /* O botão de retirar a fotografia afasta-se 15px do topo */
+	font-size: 20px; /* O botão de retirar a fotografia fica com 18px de tamanho */
+	cursor: Pointer; /* Quando meto o rato em cima do botão de retirar a fotografia ele muda o ponteiro para que fique o indicador */
+	display: None; /* O botão de retirar a fotografia fica invisível por defeito e só vai aparecer quando uma fotografia for selecionada */
+	color: #E63946; /* O botão de retirar a fotografia fica a vermelho */
+}
+
+.foto .btnretirarfoto:hover /* Quando meto o rato por cima do botão de retirar a fotografia: */
+{
+	color: #DD3C48; /* O botão de retirar a fotografia fica com uma cor de uma tonalidade de vermelho mais escuro */
+}
+
+.foto.escolhida:hover .btnretirarfoto /* Quando meto o rato por cima da fotografia: */
+{
+	display: Block; /* O botão de retirar a fotografia fica visível */
+}
+
+.foto.escolhida:hover .nomeficheiro /* Quando meto o rato por cima da fotografia: */
+{
+	display: Block; /* O nome do ficheiro fica visível */
+}
+
+.btnfotoescondido
+{
+	z-index: -1; /* O botão de selecionar a fotografia fica por deibaixo de tudo para não ficar visível */
+	position: Absolute; /* O botão de selecionar a fotografia fica sempre no mesmo sítio escondido */
+	margin-top: 25px; /* O botão de selecionar a fotografia afasta-se 25px do topo */
+}
+
+.btnalterar
+{
+	width: 500px; /* Mete o botão com comprimento de 500px */
+	background-color: #E63946; /* Mete a cor de fundo do botão a uma tonalidade de vermelho */
+	color: White; /* Mete a cor da letra do botão a branco */
+	padding: 10px; /* Mete a letra do botão afastada 10px de cima, de baixo, da esquerda e da direita */
+	margin: 8px 0px; /* Afasta o botão 8px de cima e de baixo */
+	border: None; /* Retira o destaque das bordas do botão */
+	border-radius: 8px; /* Mete as bordas do botão com 8px de raio */
+	cursor: Pointer; /* Mete o ponteiro do rato com o indicador quando meto o caro por cima do botão */
+	font-size: 20px; /* Mete a letra do botão com tamanho de 20px */
+}
+
+.btnalterar:hover /* Quando passar com o rato por cima do botão faz o seguinte: */
+{
+	background-color: #DD3C48; /* Mete a cor de fundo do botão a uma tonalidade de vermelho mais escuro que o que estava */
+}
+
+@media screen and (max-width: 1500px) /* Quando o comprimento do ecrã for 1500px ou menor vai acontecer o seguinte: */
+{
+	.zonatabela
+	{
+		margin: Auto; /* A tabela fica centrada */
+		width: 92%; /* A tabela fica com o comprimento a 92% do comprimento do ecrã */
+	}
+	
+	.pesquisar
+	{
+		margin-left: 55px; /* A caixa de texto afasta-se 55px da esquerda */
+	}
+	
+	.btnpesquisar
+	{
+		margin-left: 323px; /* O botão de pesquisar afasta-se 323px da esquerda */
+	}
+	
+	.selectpesquisar
+	{
+		margin-left: 380px; /* A caixa de seleção de pesquisar afasta-se 380px da esquerda */
+	}
+	
+	.textoordenar
+	{
+		margin-left: 55px; /* O texto afasta-se 55px da esquerda */
+	}
+	
+	.selectordenar
+	{
+		margin-left: 55px; /* A caixa de seleção de ordenar afasta-se 55px da esquerda */
+	}
+}
+
+@media screen and (max-width: 800px) /* Quando o comprimento do ecrã for 800px ou menor vai acontecer o seguinte: */
+{
+	.pesquisar
+	{
+		margin-left: 25px; /* A caixa de texto afasta-se 25px da esquerda */
+	}
+	
+	.btnpesquisar
+	{
+		margin-left: 290px; /* O botão de pesquisar afasta-se 290px da esquerda */
+	}
+	
+	.selectpesquisar
+	{
+		width: 300px; /* O comprimento da caixa de seleção de pesquisas fica a 300px */
+		margin-left: 25px; /* A caixa de seleção afasta-se 25px da esquerda */
+		margin-top: 50px; /* A caixa de seleção afasta-se 50px do topo */
+	}
+	
+	.textoordenar
+	{
+		margin-left: 25px; /* O texto afasta-se 25px da esquerda */
+	}
+	
+	.selectordenar
+	{
+		margin-left: 25px; /* A caixa de seleção de ordenar afasta-se 25px da esquerda */
+	}
+	
+	.zonafoto
+	{
+		width: 350px; /* A zona da fotografia fica com 350px de comprimento */
+	}
+	
+	.btnalterar
+	{
+		width: 350px; /* O botão fica com 350px de comprimento */
+	}
+}

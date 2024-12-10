@@ -1,0 +1,207 @@
+/* Geral */
+body
+{
+	margin: 0px; /* Mete para usar o ecrã inteiro */
+}
+
+/* Início do menu horizontal */
+.menuhorizontal
+{
+	position: Sticky; /* O menu horizontal fica sempre na parte de cima do computador e vai descendo */
+	top: 0; /* Mete-se top: 0; sempre que se usa o position: Sticky; se não não funciona */
+	width: 100%; /* Mete o menu horizontal com 100% de comprimento */
+	height: 60px; /* Mete o menu horizontal com 60px de altura */
+	display: Flex; /* O display: Flex; é necessário para o flex-wrap poder funcionar */
+	flex-wrap: Wrap; /* Faz tudo caber na minha linha */
+	z-index: 1000; /* Mete em cima de tudo */
+	background-color: #A8DADC; /* Mete a cor de fundo a azul bébé */
+}
+
+.menuhorizontal ul
+{
+	display: Flex; /* O display: Flex; é necessário para o flex-wrap poder funcionar */
+	flex-wrap: Wrap; /* Faz tudo caber na mesma linha */
+	padding-left: 15px; /* Afasta da esquerda 15px os itens do menu */
+}
+
+.menuhorizontal ul li
+{
+	list-style: None; /* Retira as bolinhas da lista para o menu ficar mais apresentável */
+	line-height: 30px; /* Mete a altura da letra a 30px */
+}
+
+.menuhorizontal ul li .nomesite
+{
+	height: 100%; /* Mete a nome do site com 100% de altura */
+	padding: 0px 0px; /* Mete o nome do site colado aos cantos */
+	text-transform: Uppercase; /* Mete o nome do site em letras grandes */
+	text-decoration: None; /* Retira o traço do link */
+	color: #111111; /* Mete a cor de letra numa tonalidade preta */
+	font-family: Josefin Sans; /* Mete a nome do site com o tipo do letra Josefin Sans */
+	font-size: 16px; /* Mete o tamanho da letra a 16px */
+	font-weight: Semi-bold 600; /* Mete o texto a negrito */
+}
+
+.btnmenuvertical
+{
+	width: 60px; /* Mete o botão do menu vertical com 60 pixeis de comprimento */
+	height: 100%; /* Mete o botão do menu vertical com 100% de altura */
+	background-repeat: No-repeat; /* Mete a imagem de fundo para não se repetir */
+	background-size: 110%; /* Mete a imagem de fundo com 110% do tamanho */
+	background-position: Center; /* Centra a imagem de fundo */
+	cursor: Pointer; /* Muda o ponteiro do rato para o indicador */
+}
+
+.logotipo
+{
+	display: inline-block; /* Faz a imagem ficar visível em cima do menu horizontal */
+	width: 60px; /* Mete o logotipo com 60 pixeis de comprimento */
+	height: 100%; /* Mete o logotipo com 100% de altura */
+	background-repeat: No-repeat; /* Mete a imagem de fundo com 110% do tamanho */
+	background-size: 75%; /* Centra a imagem de fundo */
+	background-position: Center; /* Muda o ponteiro do rato para o indicador */
+}
+
+.selectvista
+{
+	height: 100%; /* A altura da caixa de seleção fica com 100% da altura do menu horizontal */
+	position: Absolute; /* Mete a caixa de seleção sempre fica no mesmo sítio */
+	top: 0; /* A caixa de seleção fica colada no topo */
+	right: 70; /* A caixa de seleção afasta-te 70px da direita */
+	background-color: #A8DADC; /* A caixa de seleção fica com a cor de fundo de azul bébé */
+	font-size: 16px; /* O tamanho da letra da caixa de seleção fica com 16px */
+	border: None; /* Retira as bordas da caixa de seleção */
+}
+
+.selectvista:hover /* Quando meter o rato por cima da caixa de seleção */
+{
+	box-shadow: None; /* Retira as sombras para não ficar haver conflitos com o outros selects */
+}
+
+.logout
+{
+	display: inline-block; /* Faz a imagem ficar visível em cima do menu horizontal */
+	position: Absolute; /* Faz o botão de terminar sessão ficar no mesmo sítio */
+	top: 0; /* Mete o botão de terminar sessão encostado no topo */
+	right: 0;  /* Mete o botão de terminar sessão encostado na esquerda */
+	width: 60px; /* Mete o botão de terminar sessão com 60 pixeis de comprimento */
+	height: 100%; /* Mete o botão de terminar sessão com 100% de altura */
+	background-repeat: No-repeat; /* Mete a imagem de fundo com 110% do tamanho */
+	background-size: 75%; /* Centra a imagem de fundo */
+	background-position: Center; /* Muda o ponteiro do rato para o indicador */
+}
+/* Fim do menu horizontal */
+
+/* Início do menu vertical */
+.menuvertical
+{
+	position: Fixed; /* Faz o menu vertical ficar sempre naquele canto */
+	bottom: 0; /* Mete o menu vertical colado na parte de baixo do ecrã  */
+	left: 0; /* Mete o menu vertical colado na esquerda do ecrã */
+	width: 50px; /* O menu vertical fica com 50px de comprimento */
+	height: Calc(100% - 60px); /* O menu vertical fica com a altura correspondente a 100% do ecrã menos 60px, por exemplo, se o ecrã tiver 2500px de altura o menu vertical fica com 2440px */
+	padding: 0px 5px; /* Fica colado ao topo do ecrã e afasta-se 5px da esquerda; */
+	overflow-y: Auto; /* Caso seja necessário aparecerá uma barra de rolagem para subir e para descer caso os itens do menu vertical for mais alto que a altura do ecrã */
+	background-color: #1D3557; /* Mete a cor de fundo do menu vertical a uma tonalidade de azul escuro */
+	z-index: 1000; /* Mete o menu vertical por cima de tudo */
+	transition: All 0.5s ease-in-out; /* Faz uma animação ao menu vertical aparecer fazendo durar 0.5 segundos */
+}
+
+.menuvertical ul
+{
+	padding-top: 15px; /* Mete os itens do menu afastados 15px do topo do ecrã */
+	overflow: Hidden; /* Retira todas as barras de rolagem relacionadas ao menu vertical */
+	visibility: Hidden; /* Esconde o itens do menu vertical */
+}
+
+.menuvertical ul li
+{
+	line-height: 60px; /* Mete a altura da letra a 60px */
+	list-style: None; /* Retira as bolinhas da lista para o menu ficar mais apresentável */
+}
+
+.menuvertical ul li a
+{
+	display: Block; /* Mete os itens do menu visíveis quando abrir o menu */
+	height: 60px; /* Mete os itens do menu a 60px de altura */
+	padding: 0px 10px; /* Fica colado ao topo do ecrã e afasta-se 10px da esquerda; */
+	text-decoration: None; /* Retira o traço do link */
+	text-transform: Uppercase; /* Mete o menus em letras grandes */
+	color: White; /* Mete a cor dos itens do menu a branco */
+	font-family: Josefin Sans; /* Mete o tipo de letra dos itens do menu a Josefin Sans */
+	font-size: 16px; /* Mete o tamanho da letra dos itens do menu a 16px */
+}
+
+.menuvertical ul li a:hover /* Quando passo com o rato por cima dum item do menu faz o seguinte: */
+{
+	background-color: #222222; /* A cor de fundo fica uma tonalidade preta */
+}
+
+.divisoria
+{
+	position: Fixed; /* Faz a linha que divide do menu para o submenu ficar sempre no mesmo sítio */
+	bottom: 0; /* Mete a linha que divide do menu para o submenu colado na parte de baixo do ecrã  */
+	left: 272px; /* Afasta a linha que divide do menu para o submenu 272px da esquerda  */
+	width: 0px; /* Retira o comprimento da linha que divide do menu para o submenu */
+	height: Calc(100% - 60px); /* A linha que divide do menu para o submenu fica com a altura correspondente a 100% do ecrã menos 60px, por exemplo, se o ecrã tiver 2500px de altura o menu vertical fica com 2440px */
+	background-color: #457B9D; /* Mete a cor de fundo da linha que divide do menu para o submenu a uma tonalidade de azul bébé */
+	z-index: 1000; /* Mete a linha que divide do menu para o submenu por cima de tudo */
+	transition: All 0.1s ease-in-out; /* Faz uma animação ao menu vertical aparecer fazendo durar 0.1 segundos */
+}
+
+.submenuvertical
+{
+	position: Fixed; /* Faz o submenu ficar sempre naquele canto */
+	bottom: 0; /* Mete o submenu colado na parte de baixo do ecrã  */
+	left: 274px; /* Afasta o submenu 274px da esquerda  */
+	width: 0px; /* Retira o comprimento do submenu */
+	height: Calc(100% - 60px); /* O submenu fica com a altura correspondente a 100% do ecrã menos 60px, por exemplo, se o ecrã tiver 2500px de altura o menu vertical fica com 2440px */
+	overflow-y: Auto; /* Caso seja necessário aparecerá uma barra de rolagem para subir e para descer caso os itens do submenu for mais alto que a altura do ecrã */
+	background-color: #1D3557; /* Mete a cor de fundo do submenu a uma tonalidade de azul escuro */
+	z-index: 1000; /* Mete o submenu por cima de tudo */
+	transition: All 0.5s ease-in-out; /* Faz uma animação ao menu vertical aparecer fazendo durar 0.5 segundos */
+}
+
+.submenuvertical ul
+{
+	padding-top: 15px; /* Mete os itens do submenu afastados 15px do topo do ecrã */
+	overflow: Hidden; /* Retira todas as barras de rolagem relacionadas ao menu vertical */
+	visibility: Hidden; /* Esconde o itens do submenu vertical */
+}
+
+.submenuvertical ul li
+{
+	line-height: 60px; /* Mete a altura da letra a 60px */
+	list-style: None; /* Retira as bolinhas da lista para o menu ficar mais apresentável */
+}
+
+.submenuvertical ul li a
+{
+	display: Block; /* Mete os itens do menu visíveis quando abrir o menu */
+	height: 60px; /* Mete os itens do menu a 60px de altura */
+	padding: 0px 10px; /* Fica colado ao topo do ecrã e afasta-se 10px da esquerda; */
+	text-decoration: None; /* Retira o traço do link */
+	text-transform: Uppercase; /* Mete o menus em letras grandes */
+	color: White; /* Mete a cor dos itens do menu a branco */
+	font-family: Josefin Sans; /* Mete o tipo de letra dos itens do menu a Josefin Sans */
+	font-size: 16px; /* Mete o tamanho da letra dos itens do menu a 16px */
+}
+
+.submenuvertical ul li a:hover /* Quando passo com o rato por cima dum item do menu faz o seguinte: */
+{
+	background-color: #222222; /* A cor de fundo fica uma tonalidade preta */
+}
+
+.ativo
+{
+	background-color: #1860DA; /* A cor de fundo fica um azul mais claro para identificar no menu a página em que estou */
+}
+/* Fim do menu vertical */
+
+@media screen and (max-width: 800px) /* Quando o comprimento do ecrã for 800px ou menor vai acontecer o seguinte: */
+{
+	.nomesite
+	{
+		display: None; /* Mete invisível o nome do site */
+	}
+}

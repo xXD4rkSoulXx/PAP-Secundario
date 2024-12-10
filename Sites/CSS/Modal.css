@@ -1,0 +1,1245 @@
+.zonamodal /* Zona transparente */
+{
+    display: None; /* Mete a zona do modal invisível */
+    position: Fixed; /* Mete a zona do modal fixado ao ecrã */
+	left: 0; /* Mete a zona do modal colado na esquerda */
+    top: 0; /* Mete a zona do modal colado no topo */
+    z-index: 1000; /* Mete a zona do modal por cima de tudo */
+    padding-top: 200px; /* Afasta a zona modal 200px do topo */
+    width: 100%; /* Mete a zona do modal com o comprimento do ecrã inteiro */
+    height: 100%; /* Mete a zona do modal com a altura do ecrã inteiro */
+    overflow: Auto; /* Caso seja necessário aparecerá uma barra de rolagem para subir e descer caso o modal for mais alto que a altura do ecrã e para ir para a direita e para a esquerda caso o modal for mais comprido que o comprimento do ecrã */
+    background-color: Rgba(0, 0, 0, 0.4); /* Mete a cor de fundo da zona do modal a um preto transparente dando para ver tudo da página mas fica mais escuro */
+}
+
+/* Modal de tudo correu bem */
+.modalcerto
+{
+    background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+    padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+    margin: Auto; /* Centra o modal */
+    border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+    width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+    height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+    border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalcerto; /* Nome da animação */
+    animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalcerto::before /* Tudo o que vai acontecer antes do modal certo: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+    margin: Auto; /* Centra o que estiver antes do modal */
+    z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+    background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+    right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+    animation-name: animacaomodalcertobefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalcerto /* Animação do modal certo*/
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalcertobefore /* Animação do que vem antes do modal certo */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+/* Modal se correu algo mal */
+.modalerro
+{
+    background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+    padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+    margin: Auto; /* Centra o modal */
+    border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+    width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+    height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+    border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+    animation-name: animacaomodalerro; /* Nome da animação */
+    animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalerro::before /* Tudo o que vai acontecer antes do modal de erro: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+    margin: Auto; /* Centra o que estiver antes do modal */
+    z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+    background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+    right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+    animation-name: animacaomodalerrobefore; /* Nome da animação */
+    animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalerro /* Animação do modal de erro */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+    to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalerrobefore /* Animação do que vem antes do modal de erro*/
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+/* Modal de aviso */
+.modalaviso
+{
+    background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+    padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+    margin: Auto; /* Centra o modal */
+    border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+    width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+    height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+    border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+    animation-name: animacaomodalaviso; /* Nome da animação */
+    animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalaviso::before /* Tudo o que vai acontecer antes do modal de aviso: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+    margin: Auto; /* Centra o que estiver antes do modal */
+    z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+    background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+    right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+    animation-name: animacaomodalavisobefore; /* Nome da animação */
+    animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalaviso /* Animação do modal de aviso */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+    to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalavisobefore /* Animação do que vem antes do modal de aviso */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+/* A partir daqui começam os modals de caso não existam dados preenchidos por exemplo se não houver utilizadores preenchido aparece isso lá no consultar utilizadores */
+.modalutilizador
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalutilizador; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalutilizador::before /* Tudo o que vai acontecer antes do modal utilizador: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalutilizadorbefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalutilizador /* Animação do modal utilizador */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalutilizadorbefore /* Animação do que vem antes do modal utilizador */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalpass
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalpass; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalpass::before /* Tudo o que vai acontecer antes do modal pass: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalpassbefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalpass /* Animação do modal pass */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalpassbefore /* Animação do que vem antes do modal pass */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalescola
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalescola; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalescola::before /* Tudo o que vai acontecer antes do modal escola: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalescolabefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalescola /* Animação do modal escola */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalescolabefore /* Animação do que vem antes do modal escola */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalqim
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalqim; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalqim::before /* Tudo o que vai acontecer antes do modal qim: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalqimbefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalqim /* Animação do modal qim */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalqimbefore /* Animação do que vem antes do modal qim */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalcomputador
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalcomputador; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalcomputador::before /* Tudo o que vai acontecer antes do modal computador: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalcomputadorbefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalcomputador /* Animação do modal computador */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalcomputadorbefore /* Animação do que vem antes do modal computador */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalmonitor
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalmonitor; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalmonitor::before /* Tudo o que vai acontecer antes do modal monitor: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalmonitorbefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalmonitor /* Animação do modal monitor */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalmonitorbefore /* Animação do que vem antes do modal monitor */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalprojetor
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalprojetor; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalprojetor::before /* Tudo o que vai acontecer antes do modal projetor: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalprojetorbefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalprojetor /* Animação do modal projetor */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalprojetorbefore /* Animação do que vem antes do modal projetor */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalavaria
+{
+	background-color: #F1FAEE; /* A cor de fundo do modal fica com uma tonalidade de verde sem tom */
+	padding: 20px; /* O texto do modal e o botão afasta-se 20px de todos os lados */
+	margin: Auto; /* Centra o modal */
+	border: 1px solid #888888; /* As bordas do modal ficam com 1px de expessura com uma tonalidade de cizento */
+	width: 30%; /* O comprimento do modal fica com 30% do comprimento do ecrã */
+	height: 330px; /* O modal fica com 330px de altura */
+	text-align: Center; /* O texto do modal e o botão fica alinhado ao centro */
+	border-radius: 3%; /* As bordas do modal ficam com 3% de raio */
+	position: Relative; /* Faz o Modal ficar por cima de todos *//* Obrigatório o uso caso queira usar animações */
+	animation-name: animacaomodalavaria; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+.modalavaria::before /* Tudo o que vai acontecer antes do modal avaria: */
+{
+	content: ""; /* Obrigatório o uso do content para um pseudo-elemento funcionar */
+	margin: Auto; /* Centra o que estiver antes do modal */
+	z-index: 1000; /* Mete o que estiver antes do modal acima de tudo */
+	/* A imagem de fundo vai ser recebida via javascript */
+	background-size: Cover; /* A imagem de fundo vai ocupar a zona toda associada à parte de antes do modal */
+	background-repeat: No-repeat; /* A imagem de fundo que estiver antes do modal não se repete */
+	position: Fixed; /* A imagem de fundo que estiver antes do modal fica fixo naquela zona *//* Obrigatório o uso caro queira usar animações jundo com pseudo elementos */
+	top: 60px; /* A imagem de fundo que estiver antes do modal afasta-se 60px do topo */
+	left: 0; /* A imagem de fundo que estiver antes do modal não se afasta da esquerda */
+	right: 0; /* A imagem de fundo que estiver antes do modal não se afasta da direita */
+	width: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de comprimento */
+	height: 230px; /* A imagem de fundo que estiver antes do modal fica com 230px de altura */
+	animation-name: animacaomodalavariabefore; /* Nome da animação */
+	animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalavaria /* Animação do modal avaria */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -300; /* -300px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 0; /* Lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+@keyframes animacaomodalavariabefore /* Animação do que vem antes do modal avaria */
+{
+	/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+	from /* Vem de: */
+	{
+		top: -240; /* -240px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 0; /* Invisível */
+	}
+	
+	to /* Até: */
+	{
+		top: 60; /* 60px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		opacity: 1; /* Visível */
+	}
+}
+
+.modalfoto
+{
+	margin: Auto; /* O modal da fotografia fica centrado */
+	display: Block; /* O modal da fotografia fica visível quando chamá-lo */
+	width: 80%; /* O modal da foto fica com o comprimento de 80% do comprimento do ecrã */
+	max-width: 700px; /* O nome da fotografia fica com o comprimento máximo até 700px */
+	animation-name: animacaomodalfoto; /* Nome da animação */
+    animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaomodalfoto /* Animação do modal foto */
+{
+	/* Faz a animação que vem de longe até chegar perto à posição original */
+	from /* Vem de: */
+	{
+		transform: Scale(0); /* Longe */
+	}
+	
+	to /* Até: */
+	{
+		transform: Scale(1); /* Posição original */
+	}
+}
+
+.nomefoto
+{
+    margin: Auto; /* O nome da fotografia fica centrado */
+    display: Block; /* O nome da fotografia fica visível quando chamá-lo */
+    width: 80%; /* O nome da foto fica com o comprimento de 80% do comprimento do ecrã */
+    max-width: 700px; /* O nome da fotografia fica com o comprimento máximo até 700px */
+    text-align: Center; /* O nome da fotografia fica centrado */
+    color: #CCCCCC; /* O nome da fotografia fica com a cor uma tonalidade de cizento */
+    padding: 10px 0px; /* O nome da fotografia afasta-se 10px da esquerda e da direita */
+    height: 150px; /* O nome da fotografia fica com 150px de altura */
+    animation-name: animacaonomefoto; /* Nome da animação */
+    animation-duration: 0.6s; /* A animação vai durar 0,6 segundos */
+}
+
+@keyframes animacaonomefoto /* Animação do nome da foto */
+{
+	/* Faz a animação que vem de longe até chegar perto à posição original */
+	from /* Vem de: */
+	{
+		transform: Scale(0); /* Longe */
+	}
+	
+	to /* Até: */
+	{
+		transform: Scale(1); /* Posição original */
+	}
+}
+
+.fecharmodal
+{
+    position: Absolute; /* Faz a cruz de fechar o modal ficar no mesmo sítio lá em cima no canto direito */
+    right: 35px; /* A cruz de fechar o modal afasta-se 35px da direita */
+	top: 15px; /* A cruz de fechar o modal afasta-se 15px do topo */
+    color: #E63946; /* A cruz de fechar o modal fica com uma tonalidade de vermelho */
+    font-size: 40px; /* A cruz de fechar o modal fica com 40px de tamanho */
+    font-weight: Bold; /* A cruz de fechar o modal fica com uma cor mais forte */
+    transition: 0.3s; /* Se houver alguma animação com a cruz de fechar o modal ela demora 0,3 segundos a ser executada */
+}
+
+.fecharmodal:hover
+{
+    color: #E51625; /* A cruz de fechar o modal fica com uma cor de uma tonalidade de vermelho mais escuro */
+    cursor: Pointer; /* Quando meto o rato em cima da cruz de fechar o modal ele muda o ponteiro para que fique o indicador */
+}
+
+.resposta
+{
+	font-size: 23px; /* A resposta do modal fica com tamanho de 23px */
+}
+
+.caixatextomodal
+{
+	height: 40px; /* A caixa de texto do modal fica com 40px de altura */
+	width: 300px; /* A caixa de texto do modal fica com 300px de comprimento */
+	margin: 8px; /* A caixa de texto do modal afasta-se 8px de todas as direções */
+	border-radius: 5px; /* A caixa de texto do modal fica com as bordas com um raio de 5px */
+	border-left-width: 3px; /* A caixa de texto do modal fica com o comprimento da esquerda a 3px */
+	border-right-width: 3px; /* A caixa de texto do modal fica com o comprimento da direita a 3px */
+	border-top-width: 3px; /* A caixa de texto do modal fica com o comprimento do topo a 3px */
+	border-bottom-width: 3px; /* A caixa de texto do modal fica com o comprimento de baixo a 3px */
+	border-color: #457B9D; /* A cor das bordas da caixa de texto do modal fica com uma cor a uma tonalidade de azul escuro */
+	border-style: Solid; /* As bordas da caixa de texto do modal ficam com um estilo mais sólido */
+	font-family: Josefin Sans; /* O tipo de letra da caixa de texto do modal fica a Josefin Sans */
+	font-size: 14px; /* A letra da caixa de texto do modal fica com 14px de tamanho */
+}
+
+.btnok
+{
+	width: 300px; /* O botão ok fica com 300px de comprimento */
+    color: White; /* O botão ok fica com a cor de letra branca */
+	padding: 10px; /* O texto do botão ok afasta-se 10px de todos os lados */
+	margin: 8px 0px; /* O botão ok afasta-se 8px de cima e de baixo mas não se afasta de aonde está da esquerda e da direita */
+	border: None; /* Retira as bordas do botão ok */
+	border-radius: 8px; /* As bordas do botão ok fica com 8px de raio */
+	cursor: Pointer; /* Quando meto o rato por cima do botão ok fica com o indicador */
+	font-size: 26px; /* A letra do botão ok fica com 26px de expessura */
+}
+
+.btnmetade /* Usado quando tenho 2 botões, o cancelar e o confirmar */
+{
+	width: 150px; /* O botão fica com 150px de comprimento */
+	color: White; /* O botão fica com a cor de letra branca */
+	padding: 10px; /* O texto do botão afasta-se 10px de todos os lados */
+	margin: 8px 0px; /* O botão afasta-se 8px de cima e de baixo mas não se afasta de aonde está da esquerda e da direita */
+	border: None; /* Retira as bordas do botão */
+	border-radius: 8px; /* As bordas do botão fica com 8px de raio */
+	cursor: Pointer; /* Quando meto o rato por cima do botão fica com o indicador */
+	font-size: 26px; /* A letra do botão fica com 26px de expessura */
+}
+
+@media screen and (max-width: 1100px) /* Quando o comprimento do ecrã for 1100px ou menor vai acontecer o seguinte: */
+{
+	.modalcerto
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalcerto::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalcertobefore /* Animação do que vem antes do modal certo */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalerro
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalerro::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalerrobefore /* Animação do que vem antes do modal de erro */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalaviso
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalaviso::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalavisobefore /* Animação do que vem antes do modal de aviso */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalutilizador
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalutilizador::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalutilizadorbefore /* Animação do que vem antes do modal utilizador */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalpass
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalpass::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalpassbefore /* Animação do que vem antes do modal pass */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalescola
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalescola::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalescolabefore /* Animação do que vem antes do modal escola */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalqim
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalqim::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalqimbefore /* Animação do que vem antes do modal qim */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalcomputador
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalcomputador::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalcomputadorbefore /* Animação do que vem antes do modal computador */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalmonitor
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalmonitor::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalmonitorbefore /* Animação do que vem antes do modal monitor */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalprojetor
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalprojetor::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalprojetorbefore /* Animação do que vem antes do modal projetor */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.modalavaria
+	{
+		width: 40%; /* O modal fica com comprimento de 40% do comprimento do ecrã */
+	}
+	
+	.modalavaria::before
+	{
+		top: 130px; /* A imagem de fundo antes do modal afasta-se 130px do topo */
+		width: 150px; /* A imagem de fundo antes do modal fica com 150px de comprimento */
+		height: 150px; /* A imagem de fundo antes do modal fica com 150px de altura */
+	}
+	
+	@keyframes animacaomodalavariabefore /* Animação do que vem antes do modal avaria */
+	{
+		/* Faz uma animação de vir de cima para o lugar aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+		from /* Vem de: */
+		{
+			top: -170; /* -170px acima de aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 0; /* Invisível */
+		}
+		
+		to /* Até: */
+		{
+			top: 130; /* 130px acima de aonde aonde fica, nesse caso o centro da página devido estar aplicado antes o margin: auto; (Código CSS para meter ao centro da página) */
+			opacity: 1; /* Visível */
+		}
+	}
+	
+	.btnok
+	{
+		width: 250px; /* O botão ok fica com 250px de comprimento */
+	}
+	
+	.btnmetade
+	{
+		width: 125px; /* O botão fica com 125px de comprimento */
+	}
+}
+
+@media screen and (max-width: 800px) /* Quando o comprimento do ecrã for 800px ou menor vai acontecer o seguinte: */
+{
+	.modalcerto
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalerro
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalaviso
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalutilizador
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalpass
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalescola
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalqim
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalcomputador
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalmonitor
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalprojetor
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalavaria
+	{
+		width: 60%; /* O modal fica com comprimento de 60% do comprimento do ecrã */
+	}
+	
+	.modalfoto
+	{
+		width: 100%; /* O modal da foto fica com 100% de comprimento */
+	}
+	
+	.caixatextomodal
+	{
+		width: 250px; /* O comprimento da caixa de texto do modal fica a 250px de comprimento */
+	}
+	
+	.btnok
+	{
+		width: 300px; /* O botão ok fica com 300px de comprimento */
+	}
+	
+	.btnmetade
+	{
+		width: 150px; /* O botão fica com 150px de comprimento */
+	}
+}

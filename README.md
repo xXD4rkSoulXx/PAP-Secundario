@@ -7,6 +7,8 @@ Adicionalmente, o sistema conta com uma área administrativa robusta, destinada 
 
 O projeto consiste numa gestão de avarias, em que no agrupamento inteiro, caso um computador, um projetor ou outro equipamento avariasse-se, o aluno ou professor poderia submeter no site o que avariou e uma descrição sobre a avaria. Por sua vez, os estagiários receberiam notificação da avaria, e depois meteriam se estava arranjado ou não conforme arranjagam. Contém também a parte administrativa que é ele quem é responsável por registar alunos, professores, equipamentos, salas, escolas entre mais, e a sua associação para saber o computador avariado vem de qual sala, o aluno que reportou é de qual escola e essas coisas.
 
+Será necessário criar uma pasta chamada "ImagensEquipamentos" para servir como repositório para as imagens dos equipamentos, visto que o GitHub não permite criar diretórios sem conteúdo armazenado neles.
+
 Cabe mencionar que este projeto foi concebido há quatro anos, motivo pelo qual não há integração de um quadro Kanban.
 
 Os colegas que integravam o grupo deste projeto na época não possuem perfis no GitHub, motivo pelo qual não foi possível associá-los a este repositório.
